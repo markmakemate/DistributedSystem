@@ -19,7 +19,7 @@ func (h *Heap) RightChild(i int) int  {
 func (h *Heap) Swap(i, j int) {
 	h.workers[i], h.workers[j] = h.workers[j], h.workers[i]
 }
-func (h *Heap) Push(x *Worker.AbstractScheduler) {
+func (h *Heap) Push(x *Worker.AbstractSchedulerSession) {
 	pos := len(h.workers)
 	h.workers[pos] = x
 	index := h.Parent(pos)
